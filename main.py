@@ -1,1 +1,0 @@
-print("Shining Chatbot 시작")
