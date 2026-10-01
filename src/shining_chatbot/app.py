@@ -15,9 +15,15 @@ from langchain.chat_models import init_chat_model
 
 # st.title("Shining Chatbot")
 
+# st.title("😎 나의 첫번째 챗봇")
+# st.write("streamlt으로 만든 챗봇 페이지 입니다.")
 
-st.title("😎 나의 첫번째 챗봇")
-st.write("streamlt으로 만든 챗봇 페이지 입니다.")
+st.set_page_config(page_title="산업재해 데이터 인사이트",
+                   layout="wide"
+                   )
+st.title("산업재해 데이터 인사이트")
+st.caption("산업재해 데이터 현황을 살펴보고, 근거자료 기반 질의응답으로 확장하는 프로젝트")
+
 
 # api_key = st.secrets["OPENAI_API_KEY"]
 
