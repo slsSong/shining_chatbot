@@ -7,7 +7,9 @@ authors = [
     { name = "slsSong", email = "slsongxl@gmail.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "streamlit>=1.64.0",
+]
 
 [project.scripts]
 shining-chatbot = "shining_chatbot:main"
