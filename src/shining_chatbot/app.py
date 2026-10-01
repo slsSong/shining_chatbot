@@ -14,13 +14,22 @@ import os
 import streamlit as st
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
+from langchain.chat_models import init_chat_model
+
 load_dotenv()
 st.title("Shining Chatbot")
-api_key = os.getenv("OPENAI_API_KEY")
-if not api_key:
-    st.error("API 키를 찾을 수 없습니다.")
-    st.stop()
-model = ChatOpenAI(model="gpt-6-luna")
+
+
+# api_key = st.secrets["OPENAI_API_KEY"]
+
+model = init_chat_model(
+    model="gpt-6-luna",
+    reasoning_effort="none",
+    api_key=st.secrets["OPENAI_API_KEY"]
+)
+
+
+# model = ChatOpenAI(model="gpt-6-luna")
 if "messages" not in st.session_state:
     st.session_state.messages = []
 for message in st.session_state.messages:

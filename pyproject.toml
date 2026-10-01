@@ -8,6 +8,7 @@ authors = [
 ]
 requires-python = ">=3.12"
 dependencies = [
+    "langchain>=1.4.3",
     "langchain-openai>=1.6.7",
     "python-dotenv>=1.2.4",
     "streamlit>=1.64.0",
